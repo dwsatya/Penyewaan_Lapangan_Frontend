@@ -20,6 +20,7 @@ export const useSignin = () => {
       if (response.status === 200) {
         // Set token to session storage
         sessionStorage.setItem('token', response.data.token);
+        sessionStorage.setItem('role', response.data.role);
 
         // Alert success
         const name = getUserName();

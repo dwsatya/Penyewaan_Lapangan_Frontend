@@ -55,13 +55,19 @@ const NavBar = () => {
                 <li>Sewa Lapangan</li>
               </a>
               <li>
-                <a
-                  href='/pelatih'
-                  className='hover:text-mainblue hover:underline'
-                >
-                  Pelatih
+                <a href='/riwayat' className='hover:text-mainblue hover:underline '>
+                  Riwayat
                 </a>
               </li>
+              <li>
+                <a
+                  href='/profile'
+                  className='hover:text-mainblue hover:underline'
+                >
+                  Profile
+                </a>
+              </li>
+              
             </ul>
           </div>
         )}

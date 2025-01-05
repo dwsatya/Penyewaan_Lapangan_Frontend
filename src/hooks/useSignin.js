@@ -36,9 +36,9 @@ export const useSignin = () => {
         const role = getUserRole();
         setTimeout(() => {
           if (role === 'admin') {
-            navigate('/pelatih');
+            navigate('/admin');
           } else if (role === 'user') {
-            navigate('/lapangan');
+            navigate('/profile');
           }
         }, 2000);
       } else if (response.status === 401) {

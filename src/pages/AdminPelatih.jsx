@@ -75,14 +75,14 @@ const AdminPelatih = () => {
   };
 
   const handleDelete = async (id) => {
-    if (window.confirm('Apakah Anda yakin ingin menghapus lapangan ini?')) {
+    if (window.confirm('Apakah Anda yakin ingin menghapus pelatih ini?')) {
       try {
         await deletePelatih(id);
         setTimeout(() => {
           window.location.reload();
         });
       } catch (err) {
-        console.error('Error deleting lapangan:', err);
+        console.error('Error deleting pelatih:', err);
       }
     }
   };
@@ -91,7 +91,7 @@ const AdminPelatih = () => {
     <div className='flex flex-col bg-mainblue h-screen'>
       <NavBar />
       <div className='mt-24 shadow-xl border rounded-lg border-gray-200 text-center bg-gray-100 my-5 mx-10'>
-        <h1 className='text-4xl font-bold p-4'>Data Lapangan</h1>
+        <h1 className='text-4xl font-bold p-4'>Data Pelatih</h1>
       </div>
 
       <div className='bg-white mx-20'>
@@ -138,7 +138,7 @@ const AdminPelatih = () => {
             ) : (
               <tr>
                 <td colSpan='4' className='text-center py-2'>
-                  Data lapangan kosong . . .
+                  Data pelatih kosong . . .
                 </td>
               </tr>
             )}
@@ -170,7 +170,7 @@ const AdminPelatih = () => {
                   className='block text-sm font-medium mb-1'
                   htmlFor='nama_pelatih'
                 >
-                  Nama Lapangan
+                  Nama Pelatih
                 </label>
                 <input
                   type='text'

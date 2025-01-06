@@ -1,16 +1,6 @@
 import NavBar from '../component/NavBar';
-import Swal from 'sweetalert2';
 
 const AdminDashboard = () => {
-  // Fungsi untuk mengelola data pelatih
-  const handleManagePelatih = () => {
-    Swal.fire({
-      icon: 'info',
-      title: 'Pengelolaan Pelatih',
-      text: 'Fitur ini memungkinkan Anda untuk melihat dan mengelola data pelatih.',
-    });
-  };
-
   return (
     <div className='relative'>
       {/* Navbar */}
@@ -52,11 +42,8 @@ const AdminDashboard = () => {
               Kelola data pelatih, termasuk menambah, mengedit, dan menghapus
               pelatih.
             </p>
-            <button
-              onClick={handleManagePelatih}
-              className='mt-4 px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition'
-            >
-              Kelola Pelatih
+            <button className='mt-4 px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition'>
+              <a href='/admin/pelatih'>Kelola Pelatih</a>
             </button>
           </div>
         </div>

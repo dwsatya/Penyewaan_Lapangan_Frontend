@@ -8,6 +8,7 @@ import Singin from './pages/Signin';
 import ProtectedRoute from './component/ProtectedRoute';
 import ProfilePages from './pages/ProfilePages';
 import AdminLapangan from './pages/AdminLapangan';
+import AdminPelatih from './pages/AdminPelatih';
 
 const App = () => {
   return (
@@ -45,6 +46,12 @@ const App = () => {
           path='/admin/lapangan'
           element={
             <ProtectedRoute element={<AdminLapangan />} requiredRole='admin' />
+          }
+        />
+        <Route
+          path='/admin/pelatih'
+          element={
+            <ProtectedRoute element={<AdminPelatih />} requiredRole='admin' />
           }
         />
       </Routes>
